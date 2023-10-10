@@ -12,12 +12,15 @@
 // I AM NOT DONE
 
 pub fn generate_nametag_text(name: String) -> Option<String> {
-    if name.is_empty() {
+    if name.is_empty() 
+    {
         // Empty names aren't allowed.
-        None
-    } else {
+        Err("`name` was empty; it must be nonempty.".to_string())
+    } else 
+    {
         Some(format!("Hi! My name is {}", name))
     }
+    None
 }
 
 #[cfg(test)]
